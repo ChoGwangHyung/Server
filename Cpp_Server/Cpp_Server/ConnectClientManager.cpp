@@ -108,7 +108,7 @@ void ConnectClientManager::communicate()
 
 DWORD WINAPI ConnectClientManager::SocketThread(LPVOID lpParam)
 {
-	ServerAgent *This = (ServerAgent *)lpParam;
+	ConnectClientManager*This = (ConnectClientManager*)lpParam;
 	SOCKET sock = This->clientSocket;
 	int retval;
 	int addressLen;
